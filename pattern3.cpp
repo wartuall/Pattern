@@ -27,77 +27,84 @@ Output:
 @*******@
 *********
 */   
-    int n;
+ 
+int n;
     cin >> n;
-    int t = 0;
-    for (int i = 1; i <= n - n / 2; ++i)
+    if (n >= 5 and n % 2 != 0)
     {
-        for (int j = 1; j <= (n - n / 2) - i; j++)
+        int t = 0;
+        for (int i = 1; i <= n - n / 2; ++i)
         {
-            cout << " ";
-        }
-        for (int j = 1; j <= i; j++)
-        {
-            cout << "*";
-        }
-
-        for (int j = 2; j <= i; ++j)
-        {
-            cout << "*";
-        }
-        cout << endl;
-    }
-    for (int i = 1; i <= n; i++)
-    {
-        if (i <= n - n / 2)
-        {
-            for (int j = 1; j <= 1; j++)
-            {
-                cout << "@";
-            }
-            for (int j = 1; j <= n - 2; j++)
+            for (int j = 1; j <= (n - n / 2) - i; j++)
             {
                 cout << " ";
             }
-            for (int j = 1; j <= 1; j++)
-            {
-                cout << "@";
-            }
-            cout << endl;
-        }
-        else
-        {
-            ++t;
-            for (int j = 1; j <= 1; j++)
-            {
-                cout << "@";
-            }
-            for (int j = 1; j <= n / 2 - t; j++)
-            {
-                cout << " ";
-            }
-            for (int j = 1; j <= t; ++j)
+            for (int j = 1; j <= i; j++)
             {
                 cout << "*";
             }
-            for (int j = 2; j <= t; ++j)
+            for (int j = 2; j <= i; ++j)
             {
                 cout << "*";
             }
-            for (int j = 1; j <= n / 2 - t; j++)
-            {
-                cout << " ";
-            }
-            for (int j = 1; j <= 1; j++)
-            {
-                cout << "@";
-            }
             cout << endl;
         }
+        for (int i = 1; i <= n; i++)
+        {
+            if (i <= n - n / 2)
+            {
+                for (int j = 1; j <= 1; j++)
+                {
+                    cout << "@";
+                }
+                for (int j = 1; j <= n - 2; j++)
+                {
+                    cout << " ";
+                }
+                for (int j = 1; j <= 1; j++)
+                {
+                    cout << "@";
+                }
+                cout << endl;
+            }
+            else
+            {
+                ++t;
+                for (int j = 1; j <= 1; j++)
+                {
+                    cout << "@";
+                }
+                for (int j = 1; j <= n / 2 - t; j++)
+                {
+                    cout << " ";
+                }
+                for (int j = 1; j <= t; ++j)
+                {
+                    cout << "*";
+                }
+                for (int j = 2; j <= t; ++j)
+                {
+                    cout << "*";
+                }
+                for (int j = 1; j <= n / 2 - t; j++)
+                {
+                    cout << " ";
+                }
+                for (int j = 1; j <= 1; j++)
+                {
+                    cout << "@";
+                }
+                cout << endl;
+            }
+        }
+        for (int j = 1; j <= n; j++)
+        {
+            cout << "*";
+        }
     }
-    for (int j = 1; j <= n; j++)
+    else
     {
-        cout << "*";
+        cout << "Enter a valid input.";
     }
     return 0;
-}
+}   
