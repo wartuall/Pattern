@@ -4,7 +4,7 @@ int main()
 {
 
 /*Write the code for the pattern given below:-
-Pttern must be dynamic. It should work for any odd numbers. (Excluding 1 and any negative numbers)
+Pattern must be dynamic. It should work for any odd numbers. (Excluding 1 and any negative numbers)
 It should not run for even numbers .
 
 n always starts from 5(or greater).
